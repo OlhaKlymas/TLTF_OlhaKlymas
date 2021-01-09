@@ -1,0 +1,103 @@
+.header{
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  padding: 40px 48px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .header__left-block h1{
+    font-size: 16px;
+    font-family: 'GT America';
+    line-height: 16px;
+    letter-spacing: -1px;
+
+    @include breakpoint($mobile-bp){
+      font-size: 15px;
+    }
+  }
+
+  .header__right-block{
+    font-size: 11px;
+    line-height: 1.8;
+    text-align: right;
+    letter-spacing: 0.02em;
+
+    a:hover{
+      text-decoration: underline;
+    }
+
+    @include breakpoint($note-bp){
+      font-size: 12px;
+    }
+
+    @include breakpoint($mobile-bp){
+
+      #menu-list{
+        position: absolute;
+        top: 25px;
+        right: 55px;
+        padding: 0 10px;
+
+        display: none;
+        background: rgba($primary, 0.5);
+      }
+
+      #mobile-menu{
+        height: 20px;
+        width: 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        span{
+          position: relative;
+          height: 1px;
+          width: 20px;
+          background-color: $color-lines;
+
+          display: block;
+
+          transition: 0.5s;
+
+          &:first-child{
+            margin-bottom: 7px;
+          }
+        }
+      }
+
+      nav{
+        &.active{
+          #mobile-menu{
+            span:first-child{
+              top: 3px;
+              transform: rotate(45deg);
+            }
+            span:last-child{
+              bottom: 5px;
+              transform: rotate(-45deg);
+            }
+          }
+          #menu-list{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint($note-bp){
+    padding: 30px;
+  }
+
+  @include breakpoint($mobile-bp){
+    padding: 24px;
+    align-items: center;
+  }
+}

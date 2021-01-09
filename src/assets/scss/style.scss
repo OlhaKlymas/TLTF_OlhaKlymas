@@ -1,0 +1,34 @@
+@import "mixins";
+@import "vars";
+@import "fonts";
+@import "vendor/reset";
+@import "node_modules/swiper/swiper-bundle";
+
+html{
+    box-sizing: border-box;
+
+    font-size: 62.5%;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: $primary;
+
+    font-size: 1.4rem;
+    font-family: "TTTravels", sans-serif;
+
+    transition: 1s;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Blocks */
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/tooltip";
+@import "blocks/footer";

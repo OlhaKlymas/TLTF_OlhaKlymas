@@ -1,0 +1,39 @@
+.footer{
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  padding: 48px;
+
+  .social{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    text-transform: capitalize;
+    font-size: 11px;
+    letter-spacing: 0.02em;
+
+    hr{
+      width: 56px;
+      height: 1px;
+      background: $color-lines;
+      opacity: 0.24;
+    }
+
+    a{
+      padding: 8px;
+    }
+
+    @include breakpoint($note-bp){
+      font-size: 12px;
+    }
+  }
+
+  @include breakpoint($note-bp){
+    padding: 30px;
+  }
+
+  @include breakpoint($mobile-bp){
+    padding: 24px;
+  }
+}
