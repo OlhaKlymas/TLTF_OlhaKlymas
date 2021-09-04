@@ -17,7 +17,7 @@ gulp
 
 ### 📸 Посмотреть проект можно здесь: 
 
-<a href="http://tftl.klymas.com/">tftl.klymas.com</a>
+<a href="http://tftl.klymas.com/" target="_blank">tftl.klymas.com</a>
 
 <br> 
 <div align="center">
